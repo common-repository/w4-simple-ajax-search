@@ -1,0 +1,66 @@
+.w4SearchArea{
+    position: relative;
+    font-size: 10px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+.w4SearchBar.loading{
+    background-image: url("img/loader.svg") !important;
+    background-position: right 1em center;
+    background-repeat: no-repeat;
+}
+.w4SearchBar {
+     font-size: 1.8em;
+    width: 100%;
+    height: 3.33em;
+   
+    padding: 0 1.1em;
+    box-shadow: 0 0 8px 1px rgba(146,146,146,0.5);
+    border: none;
+     box-sizing: border-box;
+    margin: 0 auto 0 auto;
+    display: block;
+    background-image: url(img/search.svg) !important;
+    background-position: right 1em center;
+    background-repeat: no-repeat;
+    pointer-events: auto;
+    position: relative;
+    z-index: 1;
+}
+html[dir="rtl"] .w4SearchBar,html[dir="rtl"] .w4SearchBar.loading{
+     background-position: left 1em center;
+}
+.searchResults {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+  
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s all;
+    pointer-events: auto;
+}
+
+.searchResults.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.searchResults a,.notFound {
+    display: block;
+ 
+    font-size: 1.8em;
+    padding: 0 1.1em;
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    width: 100%;
+    line-height: 2.3em;
+  
+    transition: .3s all;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333333;
+    border-bottom: 1px solid #ccc;
+}
